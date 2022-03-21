@@ -1,0 +1,8 @@
+version: "3.9"
+   
+services:
+  osint:
+    build: .
+    volumes:
+      - ./private:/private:ro
+      - ./shared:/shared:rw
