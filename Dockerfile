@@ -1,5 +1,5 @@
 # build tools in temp container
-FROM golang:1.17-alpine AS build-env
+FROM golang:1.19-alpine AS build-env
 RUN apk -U upgrade --no-cache \
     && apk add --no-cache bash make git build-base
 RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
